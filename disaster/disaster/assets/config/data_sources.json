@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "id": "usgs",
+      "name": "USGS",
+      "description": "U.S. Geological Survey — official earthquake monitoring network.",
+      "kind": "earthquakes",
+      "enabled": true,
+      "params": {
+        "minMagnitude": 5.0,
+        "maxAgeHours": 48,
+        "limit": 100,
+        "geoRadiusKm": 2000
+      }
+    },
+    {
+      "id": "gdacs",
+      "name": "GDACS",
+      "description": "United Nations Global Disaster Alert and Coordination System (floods, cyclones, tsunamis, wildfires, volcanoes).",
+      "kind": "disasters",
+      "enabled": true,
+      "params": {
+        "maxAgeDays": 30,
+        "minAlertLevel": "green",
+        "geoRadiusKm": 2000
+      }
+    },
+    {
+      "id": "open_meteo_weather",
+      "name": "Open-Meteo",
+      "description": "National weather-model forecasts — severe weather derived from official WMO weather codes.",
+      "kind": "weather_warnings",
+      "enabled": true,
+      "params": {
+        "forecastDays": 2,
+        "minWmoCode": 61
+      }
+    }
+  ]
+}
